@@ -5,8 +5,10 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
+//authenticatable授权相关功能引用
+
 class User extends Authenticatable
-{
+{   //消息通知相关功能引用
     use Notifiable;
 
     /**
