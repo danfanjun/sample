@@ -1,7 +1,7 @@
 @extends('layouts.default')
-@extends('title',$user->name)
+@section('title',$user->name)
 
-@extends()
+@section('content')
 
 {{ $user->name }}{{ $user->email }}
 
