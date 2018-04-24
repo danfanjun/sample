@@ -20,9 +20,16 @@ class UsersController extends Controller
         $this->validate($request,[
             'name'      => 'required|max:50',
             'email'     => 'required|email|unque:users|max:255',
-            'passoword' => 'required|confirmed|min:6'
+            'password'  => 'required|confirmed|min:6'
         ]);
-        return;
+
+        $user = User::create([
+            'name'=>$request->name,
+            'email' => $request->email,
+            'password' => bcrypt($request->password),
+        ]);
+        session = $user->request;
+        return redirect()->route('users.show' , [$user]);
     }
 
 }
