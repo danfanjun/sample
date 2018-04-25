@@ -61,16 +61,20 @@ return [
         ],
 
         'pgsql' => [
-            'driver'   => 'pgsql',
-            'host'     => $db_config['host'],
-            'port'     => env('DB_PORT', '5432'),
+            'driver' => 'pgsql',
+            //'host' => env('DB_HOST', '127.0.0.1'),
+            'host' => $db_config['host'],
+            'port' => env('DB_PORT', '5432'),
+            //'database' => env('DB_DATABASE', 'forge'),
             'database' => $db_config['database'],
+            //'username' => env('DB_USERNAME', 'forge'),
             'username' => $db_config['username'],
+            //'password' => env('DB_PASSWORD', ''),
             'password' => $db_config['password'],
-            'charset'  => 'utf8',
-            'prefix'   => '',
-            'schema'   => 'public',
-            'sslmode'  => 'prefer',
+            'charset' => 'utf8',
+            'prefix' => '',
+            'schema' => 'public',
+            'sslmode' => 'prefer',
         ],
 
         'sqlsrv' => [
