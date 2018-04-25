@@ -230,4 +230,7 @@ return [
 
     'locale' => 'zh-CN',
 
+    require __DIR__.'/helpers.php';
+
+
 ];
